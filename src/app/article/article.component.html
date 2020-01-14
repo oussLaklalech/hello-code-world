@@ -1,0 +1,7 @@
+<h2>{{article.title | uppercase}} Details</h2>
+
+<h4>{{article.resume}}</h4>
+
+<li *ngFor="let section of article.sections">
+    {{section.body}}
+</li>
