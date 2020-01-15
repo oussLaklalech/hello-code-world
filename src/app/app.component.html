@@ -11,23 +11,19 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
 
   <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Hello Code World</a></mdb-navbar-brand>
 
   <!-- Collapsible content -->
   <links>
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="home" class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+        <a routerLink="article" class="nav-link waves-light" mdbWavesEffect>Test Article</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
-      </li>
-
       <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
@@ -41,6 +37,9 @@
         </div>
       </li>
 
+      <li class="nav-item">
+        <a routerLink="contact" class="nav-link waves-light" mdbWavesEffect>Contact</a>
+      </li>
     </ul>
     <!-- Links -->
 
@@ -59,7 +58,8 @@
 
 <!-- Content -->
 <div class="content" role="main">
-  <app-article [article]="article"></app-article>
+  <router-outlet></router-outlet>
+  <!-- <app-article [article]="article"></app-article> -->
   <!-- Links -->
   <div class="card-container">
     <a class="circle-link" title="Augury" href="https://augury.rangle.io/" target="_blank" rel="noopener">

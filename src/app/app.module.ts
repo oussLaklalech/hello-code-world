@@ -8,12 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    SectionComponent
+    SectionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
