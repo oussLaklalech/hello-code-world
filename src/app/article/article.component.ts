@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Article } from '../classes/article';
-import { Section } from '../classes/section';
+import { ArticleService } from './article.service';
 
 @Component({
   selector: 'app-article',
@@ -9,12 +9,17 @@ import { Section } from '../classes/section';
 })
 export class ArticleComponent implements OnInit {
 
-  @Input('article')
-  article: Article;
+  article: Article = new Article();
 
-  constructor() { }
+  constructor(private articleService: ArticleService) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.getArticle(2);
+  }
+
+  getArticle(id: number): void {
+    this.articleService.getArticle(id).subscribe(article => this.article = article);
+  }
 }
