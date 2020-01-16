@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ARTICLE1 } from '../mock-files/articles-mock';
+import { ARTICLE1, ARTICLE2 } from '../mock-files/articles-mock';
 import { Article } from '../classes/article';
 import { Section } from '../classes/section';
 import { Observable, of } from 'rxjs';
@@ -21,6 +21,6 @@ export class ArticleService {
     if (id == 1) {
       return of(ARTICLE1);
     }
-    return of(ARTICLE1);
+    return of(ARTICLE2);
   }
 }
